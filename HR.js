@@ -16,52 +16,42 @@
         
         let hero = getDPS();
         printResult(hero);
-    }
+        }
     if (TankInput.checked){
+         let hero = getTank();
+         printResult(hero);
         
-        let hero = getTank();
-        printResult(hero);
-    }
+         }
     if(SupportInput.checked) { 
         let hero = getSupport();
         printResult(hero);
+    
     }
-}
+
+}printResult(hero);
     
 
 
 function getDPS(){
     const dpsHeroPool = ["Ashe", "Bastion", "Cassidy", "Echo", "Genji", "Hanzo", "Junkrat", "Mei", "Pharah", "Reaper", "Sojourn", "Soilder 76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker"];
-    let newLocal = dpsHeroPool[Math.floor(Math.random() * 16)];
-    let dpsHero = newLocal;
-    return dpsHero
-
-    
-}
+    return dpsHeroPool[Math.floor(Math.random() * 16)];
+    }
 
 function getTank(){
     const tankHeroPool = ["Doomfist", "D.Va", "Orisa", "Wrecking Ball", "Reinhardt", "Sigma", "Junker Queen", "Roadhog", "Winston", "Zarya"];
-    let newLocal2 = tankHeroPool[Math.floor(Math.random() * 9)];
-    let tankHero = newLocal2
-    return tankHero
-
-}
+    return tankHeroPool[Math.floor(Math.random() * 9)];
+    }
 
 function getSupport(){
     const supportHeroPool = ["Ana", "Baptiste", "Brigitte", "Kiriko", "Lucio", "Mercy", "Moira", "Zenyatta"];
-    let newLocal3 = supportHeroPool[Math.floor(Math.random() * 7)];
-    let supportHero = newLocal3
-    return supportHero
-
-}
+    return supportHeroPool[Math.floor(Math.random() * 7)];
+    }
 
 
 function printResult(hero){
    let result = document.createElement("h1");
    result.innerText = `Your random hero is ${hero}!`;
    body.append(result);
-
-
 }
 
 
